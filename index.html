@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header>
+        <div>
+          <p class="eyebrow">SNAKE GAME</p>
+          <h1>贪吃蛇</h1>
+        </div>
+        <div class="scoreboard" aria-label="得分板">
+          <span>得分 <strong id="score">0</strong></span>
+          <span>最高 <strong id="high-score">0</strong></span>
+        </div>
+      </header>
+
+      <section class="board-wrap">
+        <canvas id="game" width="600" height="600" aria-label="贪吃蛇游戏画布"></canvas>
+        <div id="message" class="message" role="status">
+          <strong>准备开始</strong>
+          <span>按方向键或 WASD 移动</span>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="start-button" type="button">开始游戏</button>
+        <button id="pause-button" type="button" disabled>暂停</button>
+      </div>
+      <p class="help">吃到红色果实即可增长。撞到墙壁或自己，游戏结束。</p>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
